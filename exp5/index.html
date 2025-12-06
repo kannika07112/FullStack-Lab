@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Event Listener Example</title>
+
+    <style>
+        #myImage {
+            border: 3px solid #444;
+            width: 200px;
+            height: 150px;
+            transition: border-color 0.3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="clickBtn">Click Me</button> <br><br>
+
+    <img id="myimage" src="https://via.placeholder.com/200x150">
+
+    <script>
+        document.getElementById("clickBtn").addEventListener("click", function() {
+            console.log("Button clicked");
+        });
+
+        const img = document.getElementById("myimage");
+
+        img.addEventListener("mouseover", function () {
+            img.style.borderColor = "red";
+        });
+
+        img.addEventListener("mouseout", function () {
+            img.style.borderColor = "#444";
+        });
+
+        document.addEventListener("keydown", function(event) {
+            console.log("Key pressed :", event.key);
+        });
+    </script>
+
+</body>
+</html>
